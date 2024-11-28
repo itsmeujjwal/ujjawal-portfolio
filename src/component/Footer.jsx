@@ -36,7 +36,7 @@ const StyledLink = styled('a')({
 function Footer() {
   return (
     <Container>
-      <p>© 2024 Vikash Kumar Upadhyay. All rights reserved.</p>
+      <p>© 2024 Ujjawal Kumar Thakur. All rights reserved.</p>
       <LinkContainer>
         <StyledLink href="#"><WhatsAppIcon /></StyledLink>
         <StyledLink href="https://www.facebook.com/vikash.upadhyay.1656854"><FacebookIcon /></StyledLink>

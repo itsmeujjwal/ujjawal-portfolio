@@ -16,7 +16,7 @@ function AboutMe() {
 
                 }}>
                     <h1>About Me</h1>
-                    <ImgStyle src="/image/vikash.jpg" alt="vikash" style={{
+                    <ImgStyle src="/image/ujjawal.jpg" alt="vikash" style={{
                         width: "250px",
                         height: "250px",
                         borderRadius: "50%",
@@ -29,7 +29,7 @@ function AboutMe() {
 
                     }} />
                     <p>
-                        My name is <span style={{ color: "red" }}>Vikash Kumar Upadhyay</span>, and I am a dedicated Web Developer skilled in creating responsive, user-friendly websites using HTML, CSS, JavaScript, and modern frameworks. I am passionate about delivering seamless user experiences and staying updated with the latest web technologies. 😊
+                        My name is <span style={{ color: "red" }}>Ujjawal Kumar Thakur</span>, and I am a dedicated Web Developer skilled in creating responsive, user-friendly websites using HTML, CSS, JavaScript, and modern frameworks. I am passionate about delivering seamless user experiences and staying updated with the latest web technologies. 😊
                     </p>
 
                 </div>

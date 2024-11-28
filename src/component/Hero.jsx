@@ -16,7 +16,7 @@ function Hero() {
           }}
         >
           <h1 >
-            Hey, I am <span style={{ color: "red" }}>Vikash Kumar Upadhyay</span><br /> I make software</h1>
+            Hey, I am <span style={{ color: "red" }}>Ujjawal Kumar Thakur</span><br /> I make software</h1>
         </Contentsss>
         <div
           className="right"
@@ -27,7 +27,7 @@ function Hero() {
             justifyContent: "center",
           }}
         >
-          <StyledImage src="/image/vikash.jpg" alt="Portrait of Vikash" />
+          <StyledImage src="/image/ujjawal.jpg" alt="Portrait of Vikash" />
         </div>
       </Container>
 
