@@ -16,7 +16,7 @@ function Hero() {
           }}
         >
           <h1 >
-            Hey, I am <span style={{ color: "red" }}>Ujjawal Kumar Thakur</span><br /> I make software</h1>
+            Hey, I am <span style={{ color: "red" }}>Ujjawal Kumar Thakur</span><br /> I make responsibe websites.</h1>
         </Contentsss>
         <div
           className="right"

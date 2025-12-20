@@ -6,22 +6,22 @@ const workList = [
   {
     img: "/image/port.png",
     title: "Project 1",
-    par: "Lorem ipsum dolor sit amet consectetur",
+    par: "I created the blog application by using html,css,javascript and react for front end. MongoDB for the backend",
   },
   {
     img: "/image/code.png",
     title: "Project 2",
-    par: "Lorem ipsum dolor sit amet consectetur",
+    par: "It is the coding work for the different projects",
   },
   {
     img: "/image/kri.png",
     title: "Project 3",
-    par: "Lorem ipsum dolor sit amet consectetur",
+    par: "It is the library management system for managing the books in the library of any institution",
   },
   {
     img: "/image/page.png",
     title: "Project 4",
-    par: "Lorem ipsum dolor sit amet consectetur",
+    par: "It is the structure of any project selected randomly",
   },
   {
     img: "/image/ss.png",

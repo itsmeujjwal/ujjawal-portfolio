@@ -38,12 +38,12 @@ function Footer() {
     <Container>
       <p>© 2024 Ujjawal Kumar Thakur. All rights reserved.</p>
       <LinkContainer>
-        <StyledLink href="#"><WhatsAppIcon /></StyledLink>
-        <StyledLink href="https://www.facebook.com/vikash.upadhyay.1656854"><FacebookIcon /></StyledLink>
-        <StyledLink href="https://www.instagram.com/_vikash_71_/"><InstagramIcon /></StyledLink>
-        <StyledLink href="https://web.telegram.org/k/"><TelegramIcon /></StyledLink>
-        <StyledLink href="https://github.com/uvikash"><GitHubIcon /></StyledLink>
-        <StyledLink href="https://www.linkedin.com/in/vikash-kumar-upadhyay-210ba4328/"><LinkedInIcon /></StyledLink>
+        <StyledLink href="https://wa.me/9779811210639"><WhatsAppIcon /></StyledLink>
+        <StyledLink href="https://www.facebook.com/ujjawalkumar.thakur.56"><FacebookIcon /></StyledLink>
+        <StyledLink href="https://www.instagram.com/ujjwal_thakur43?igsh=MXB3aTV1M2JjZ2h4Yg=="><InstagramIcon /></StyledLink>
+        <StyledLink href="https://t.me/ujjawalkrthakur"><TelegramIcon /></StyledLink>
+        <StyledLink href="https://github.com/itsmeujjwal"><GitHubIcon /></StyledLink>
+        <StyledLink href="https://www.linkedin.com/in/ujjawal-kumar-thakur-9107a6325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><LinkedInIcon /></StyledLink>
       </LinkContainer>
     </Container>
   );

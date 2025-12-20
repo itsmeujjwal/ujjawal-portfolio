@@ -16,7 +16,7 @@ function AboutMe() {
 
                 }}>
                     <h1>About Me</h1>
-                    <ImgStyle src="/image/ujjawal.jpg" alt="vikash" style={{
+                    <ImgStyle src="/image/ujjawal.jpg" alt="ujjawal" style={{
                         width: "250px",
                         height: "250px",
                         borderRadius: "50%",
@@ -29,7 +29,7 @@ function AboutMe() {
 
                     }} />
                     <p>
-                        My name is <span style={{ color: "red" }}>Ujjawal Kumar Thakur</span>, and I am a dedicated Web Developer skilled in creating responsive, user-friendly websites using HTML, CSS, JavaScript, and modern frameworks. I am passionate about delivering seamless user experiences and staying updated with the latest web technologies. 😊
+                        My name is <span style={{ color: "red" }}>Ujjawal Kumar Thakur</span>, and I am a dedicated FrontEnd Web Developer skilled in creating responsive, user-friendly websites using HTML, CSS, JavaScript, and modern frameworks. I am passionate about delivering seamless user experiences and staying updated with the latest web technologies. 😊
                     </p>
 
                 </div>
@@ -43,7 +43,7 @@ function AboutMe() {
 
 
                 }}>
-                    <h1>Contacat Us</h1>
+                    <h1>Contact Us</h1>
                     <form
                         style={{
                             width: "300px",
@@ -53,7 +53,7 @@ function AboutMe() {
                             gap: "15px",
                         }}>
                         <label htmlFor="username">Name</label>
-                        <input type="text" id="username" placeholder="name"
+                        <input type="text" id="username" placeholder="Name"
                             style={{
                                 width: "100%",
                                 padding: "10px",
@@ -63,7 +63,7 @@ function AboutMe() {
                         />
 
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder="email"
+                        <input type="email" id="email" placeholder="Email"
                             style={{
                                 width: "100%",
                                 padding: "10px",
@@ -73,7 +73,7 @@ function AboutMe() {
                         />
 
                         <label htmlFor="message">Message</label>
-                        <textarea id="message" placeholder="message"
+                        <textarea id="message" placeholder="Message"
                             style={{
                                 width: "100%",
                                 height: "100px",
