@@ -61,7 +61,7 @@ const Bubble = styled('div')({
   bottom: '-100px',
   width: '25px',
   height: '25px',
-  backgroundColor: 'rgba(0, 123, 255, 0.3)',
+  backgroundColor: 'rgba(255, 138, 101, 0.3)',
   borderRadius: '50%',
   animation: 'floatUp 15s infinite linear',
   '@keyframes floatUp': {
