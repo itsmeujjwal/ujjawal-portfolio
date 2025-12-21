@@ -18,6 +18,7 @@ function AboutMe() {
             from_email: email,
             message: message,
             to_email: 'thakurujjawal123@gmail.com',
+            reply_to: email,
         }).then(() => {
             alert('Message sent successfully!');
             // Clear form
@@ -69,7 +70,7 @@ function AboutMe() {
 
 
                 }}>
-                    <h1>Contact Us</h1>
+                    <h1>Contact Me</h1>
                     <ContactForm onSubmit={handleSubmit}>
                         <label htmlFor="username">Name</label>
                         <Input type="text" id="username" placeholder="Name" />

@@ -25,9 +25,11 @@ function Hero() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            position: 'relative',
+            zIndex: 1,
           }}
         >
-          <StyledImage src="/image/ujjawal.jpg" alt="Portrait of Vikash" />
+          <StyledImage src="/image/mine.jpeg" alt="Portrait of Ujjawal" />
         </div>
       </Container>
 
@@ -67,6 +69,8 @@ const Container = styled('div')(({ theme }) => ({
   textAlign: "center",
   height: "500px",
   justifyContent: "space-around",
+  position: 'relative',
+  overflow: 'hidden',
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column-reverse',
   },
@@ -79,6 +83,8 @@ const Contentsss = styled('div')(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  position: 'relative',
+  zIndex: 1,
 
 
 
