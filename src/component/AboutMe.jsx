@@ -1,17 +1,32 @@
 import { styled } from "@mui/material/styles";
+import emailjs from '@emailjs/browser';
+
 
 
 
 function AboutMe() {
+    emailjs.init('oz_ahU06ooe_zncMj'); // Your EmailJS public key
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const name = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-        const subject = 'Contact Form Submission';
-        const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-        const mailto = `mailto:thakurujjawal123@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailto;
+
+        emailjs.send('service_7gr6n88', 'template_t4lzjvb', {
+            from_name: name,
+            from_email: email,
+            message: message,
+            to_email: 'thakurujjawal123@gmail.com',
+        }).then(() => {
+            alert('Message sent successfully!');
+            // Clear form
+            document.getElementById('username').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }, (error) => {
+            alert('Failed to send message: ' + error.text);
+        });
     };
 
     return (
