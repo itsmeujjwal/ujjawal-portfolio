@@ -17,8 +17,8 @@ function AboutMe() {
                 }}>
                     <h1>About Me</h1>
                     <ImgStyle src="/image/ujjawal.jpg" alt="ujjawal" style={{
-                        width: "250px",
-                        height: "250px",
+                        width: "min(250px, 80vw)",
+                        height: "min(250px, 80vw)",
                         borderRadius: "50%",
                         padding: "3px",
                         boxShadow: "0px 0px 10px red",
@@ -46,7 +46,8 @@ function AboutMe() {
                     <h1>Contact Us</h1>
                     <form
                         style={{
-                            width: "300px",
+                            width: "90%",
+                            maxWidth: "400px",
                             margin: "20px auto",
                             display: "flex",
                             flexWrap: "wrap",
@@ -100,6 +101,30 @@ function AboutMe() {
                             Submit
                         </button>
                     </form>
+
+                    <div style={{
+                        marginTop: "20px",
+                        textAlign: "center",
+                    }}>
+                        <h3>Or Contact Me Directly</h3>
+                        <a href="mailto:thakurujjawal123@gmail.com" style={{
+                            display: "inline-block",
+                            padding: "10px 20px",
+                            backgroundColor: "#D44638",
+                            color: "#fff",
+                            textDecoration: "none",
+                            borderRadius: "5px",
+                            fontSize: "16px",
+                            fontWeight: "bold",
+                            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+                            transition: "background-color 0.3s",
+                        }}
+                        onMouseOver={(e) => e.target.style.backgroundColor = "#B33A2F"}
+                        onMouseOut={(e) => e.target.style.backgroundColor = "#D44638"}
+                        >
+                            📧 Contact via Gmail
+                        </a>
+                    </div>
 
                 </div>
 

@@ -16,12 +16,22 @@ const Container = styled('div')({
   gap: '8px',
   textAlign: 'center',
   borderTop: '2px solid white',
+  '@media (max-width: 600px)': {
+    padding: '12px',
+    margin: '12px',
+    gap: '6px',
+  },
 });
 
 const LinkContainer = styled('div')({
   display: 'flex',
   gap: '16px',
   marginTop: '8px',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  '@media (max-width: 600px)': {
+    gap: '12px',
+  },
 });
 
 const StyledLink = styled('a')({
