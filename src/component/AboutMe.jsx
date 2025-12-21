@@ -3,6 +3,17 @@ import { styled } from "@mui/material/styles";
 
 
 function AboutMe() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const name = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const subject = 'Contact Form Submission';
+        const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+        const mailto = `mailto:thakurujjawal123@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+    };
+
     return (
         <>
 
@@ -44,63 +55,20 @@ function AboutMe() {
 
                 }}>
                     <h1>Contact Us</h1>
-                    <form
-                        style={{
-                            width: "90%",
-                            maxWidth: "400px",
-                            margin: "20px auto",
-                            display: "flex",
-                            flexWrap: "wrap",
-                            gap: "15px",
-                        }}>
+                    <ContactForm onSubmit={handleSubmit}>
                         <label htmlFor="username">Name</label>
-                        <input type="text" id="username" placeholder="Name"
-                            style={{
-                                width: "100%",
-                                padding: "10px",
-                                fontSize: "16px",
-                            }}
-
-                        />
+                        <Input type="text" id="username" placeholder="Name" />
 
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder="Email"
-                            style={{
-                                width: "100%",
-                                padding: "10px",
-                                fontSize: "16px",
-                            }}
-
-                        />
+                        <Input type="email" id="email" placeholder="Email" />
 
                         <label htmlFor="message">Message</label>
-                        <textarea id="message" placeholder="Message"
-                            style={{
-                                width: "100%",
-                                height: "100px",
-                                padding: "10px",
-                                fontSize: "16px",
-                                resize: "none",
-                            }}
+                        <TextArea id="message" placeholder="Message" />
 
-                        ></textarea>
-
-                        <button
-                            type="submit"
-                            style={{
-                                width: "100%",
-                                padding: "10px",
-                                fontSize: "16px",
-                                backgroundColor: "blue",
-                                color: "#fff",
-                                border: "none",
-                                borderRadius: "5px",
-                                cursor: "pointer",
-                            }}
-                        >
+                        <SubmitButton type="submit">
                             Submit
-                        </button>
-                    </form>
+                        </SubmitButton>
+                    </ContactForm>
 
                     <div style={{
                         marginTop: "20px",
@@ -175,3 +143,69 @@ const ImgStyle = styled('img')(({ theme }) => ({
     },
 
 }));
+
+const ContactForm = styled('form')({
+    width: '90%',
+    maxWidth: '400px',
+    margin: '20px auto',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '15px',
+    '@media (max-width: 600px)': {
+        width: '95%',
+        gap: '10px',
+    },
+});
+
+const Input = styled('input')({
+    width: '100%',
+    padding: '10px',
+    fontSize: '16px',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+    '&:focus': {
+        outline: 'none',
+        borderColor: 'blue',
+    },
+    '@media (max-width: 600px)': {
+        fontSize: '14px',
+        padding: '8px',
+    },
+});
+
+const TextArea = styled('textarea')({
+    width: '100%',
+    height: '100px',
+    padding: '10px',
+    fontSize: '16px',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+    resize: 'none',
+    '&:focus': {
+        outline: 'none',
+        borderColor: 'blue',
+    },
+    '@media (max-width: 600px)': {
+        fontSize: '14px',
+        padding: '8px',
+        height: '80px',
+    },
+});
+
+const SubmitButton = styled('button')({
+    width: '100%',
+    padding: '10px',
+    fontSize: '16px',
+    backgroundColor: 'blue',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    '&:hover': {
+        backgroundColor: 'darkblue',
+    },
+    '@media (max-width: 600px)': {
+        fontSize: '14px',
+        padding: '8px',
+    },
+});
