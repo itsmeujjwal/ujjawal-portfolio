@@ -5,28 +5,28 @@ import { useTransition } from "react";
 const workList = [
   {
     img: "/image/port.png",
-    title: "Project 1",
+    title: "Blog Application",
     par: "I created the blog application by using html,css,javascript and react for front end. MongoDB for the backend",
   },
   {
     img: "/image/code.png",
-    title: "Project 2",
+    title: "Coding Website",
     par: "It is the coding work for the different projects",
   },
   {
     img: "/image/kri.png",
-    title: "Project 3",
+    title: "Library Management System",
     par: "It is the library management system for managing the books in the library of any institution",
   },
   {
     img: "/image/page.png",
-    title: "Project 4",
+    title: "Project Structure",
     par: "It is the structure of any project selected randomly",
   },
   {
     img: "/image/ss.png",
-    title: "Project 5",
-    par: "Lorem ipsum dolor sit amet consectetur",
+    title: "Currency Converter",
+    par: "It is the currency converter project which converts one currency to another currency",
   },
  
 ];
@@ -83,6 +83,11 @@ const WorkCard = styled("div")(() => ({
   borderRadius: "8px",
   overflow: "hidden",
   position: "relative", // Ensures the image stays within the card
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  "&:hover": {
+    transform: "translateY(-10px)",
+    boxShadow: "0px 10px 20px rgba(255, 0, 0, 0.5)",
+  },
   img: {
     width: "100%",
     height: "200px",

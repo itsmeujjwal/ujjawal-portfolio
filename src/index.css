@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: white;
-  background-color: black;
+  background-color: #121212;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,6 +32,6 @@ body{
 @media (prefers-color-scheme: light) {
   :root {
     color: white;
-    background-color: black;
+    background-color: #121212;
   }
 }

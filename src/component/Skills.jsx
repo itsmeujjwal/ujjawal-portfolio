@@ -94,14 +94,9 @@ const SkillItem = styled('div')({
     justifyContent: 'center',
     width: '150px',
     padding: '20px',
-    background: 'linear-gradient(145deg, #333, #555)',
     color: 'white',
-    borderRadius: '12px',
-    boxShadow: '0 4px 8px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-    transformStyle: 'preserve-3d',
+    transition: 'transform 0.3s ease',
     '&:hover': {
-        transform: 'translateY(-15px) rotateX(15deg) rotateY(5deg)',
-        boxShadow: '0 20px 40px rgba(0,0,0,0.5), 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2)',
+        transform: 'scale(1.05)',
     },
 });
