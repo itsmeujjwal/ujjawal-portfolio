@@ -43,8 +43,8 @@ function Hero() {
 export default Hero;
 
 const StyledImage = styled("img")({
-  width: "400px",
-  height: "400px",
+  width: "350px",
+  height: "350px",
   borderRadius: "50%",
   marginTop: "1rem",
   boxShadow: "0px 0px 10px red",
