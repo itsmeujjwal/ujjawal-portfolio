@@ -1,5 +1,6 @@
 import { styled } from '@mui/material/styles';
 import CircularProgress from '@mui/material/CircularProgress';
+import { useTranslation } from 'react-i18next';
 
 const skillsData = {
     Frontend: [
@@ -27,16 +28,17 @@ const skillsData = {
 };
 
 function Skills() {
+    const { t } = useTranslation();
     return (
         <div style={{padding:"0 10px",
             width:"100%",
             height: 'fit-content',
         }}>
-            <Header id='myskill'>Skills</Header>
+            <Header id='myskill'>{t('Skills')}</Header>
             <div className="container" >
                 {Object.keys(skillsData).map(category => (
                     <CategorySection key={category}>
-                        <CategoryTitle>{category}</CategoryTitle>
+                        <CategoryTitle>{t(category)}</CategoryTitle>
                         <SkillsContainer>
                             {skillsData[category].map((skill, index) => (
                                 <SkillItem key={index}>

@@ -1,10 +1,9 @@
 import { styled } from "@mui/material/styles";
 import emailjs from '@emailjs/browser';
-
-
-
+import { useTranslation } from 'react-i18next';
 
 function AboutMe() {
+    const { t } = useTranslation();
     emailjs.init('oz_ahU06ooe_zncMj'); // Your EmailJS public key
 
     const handleSubmit = (e) => {
@@ -42,7 +41,7 @@ function AboutMe() {
                     padding: "5px",
 
                 }}>
-                    <h1>About Me</h1>
+                    <h1>{t('About Me')}</h1>
                     <ImgStyle src="/image/ujjawal.jpg" alt="ujjawal" style={{
                         width: "min(250px, 80vw)",
                         height: "min(250px, 80vw)",
@@ -56,7 +55,7 @@ function AboutMe() {
 
                     }} />
                     <p>
-                        My name is <span style={{ color: "red" }}>Ujjawal Kumar Thakur</span>, and I am a dedicated FrontEnd Web Developer skilled in creating responsive, user-friendly websites using HTML, CSS, JavaScript, and modern frameworks. I am passionate about delivering seamless user experiences and staying updated with the latest web technologies. 😊
+                        {t("My name is Ujjawal Kumar Thakur, and I am a dedicated FrontEnd Web Developer skilled in creating responsive, user-friendly websites using HTML, CSS, JavaScript, and modern frameworks. I am passionate about delivering seamless user experiences and staying updated with the latest web technologies. 😊")}
                     </p>
 
                 </div>
@@ -70,7 +69,7 @@ function AboutMe() {
 
 
                 }}>
-                    <h1>Contact Me</h1>
+                    <h1>{t('Contact Me')}</h1>
                     <ContactForm onSubmit={handleSubmit}>
                         <label htmlFor="username">Name</label>
                         <Input type="text" id="username" placeholder="Name" />

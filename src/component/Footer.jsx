@@ -5,6 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useTranslation } from 'react-i18next';
 
 const Container = styled('div')({
   display: 'flex',
@@ -44,9 +45,10 @@ const StyledLink = styled('a')({
 });
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <Container>
-      <p>© 2024 Ujjawal Kumar Thakur. All rights reserved.</p>
+      <p>{t('© 2024 Ujjawal Kumar Thakur. All rights reserved.')}</p>
       <LinkContainer>
         <StyledLink href="https://wa.me/9779811210639"><WhatsAppIcon /></StyledLink>
         <StyledLink href="https://www.facebook.com/ujjawalkumar.thakur.56"><FacebookIcon /></StyledLink>

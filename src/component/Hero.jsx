@@ -1,6 +1,8 @@
 import { styled } from "@mui/material/styles";
+import { useTranslation } from 'react-i18next';
 
 function Hero() {
+  const { t } = useTranslation();
   return (
     <>
       <Container>
@@ -16,7 +18,8 @@ function Hero() {
           }}
         >
           <h1 >
-            Hey, I am <span style={{ color: "red" }}>Ujjawal Kumar Thakur</span><br /> I make responsibe websites.</h1>
+            {t("Hey, I am Ujjawal Kumar Thakur I make responsive websites.")}
+          </h1>
         </Contentsss>
         <div
           className="right"

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { styled } from "@mui/material";
 import { useTransition } from "react";
+import { useTranslation } from 'react-i18next';
 
 const workList = [
   {
@@ -32,6 +33,7 @@ const workList = [
 ];
 
 function MyWork() {
+  const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
   const visibleProjects = 4; // Number of projects to show initially
 
@@ -41,20 +43,20 @@ function MyWork() {
 
   return (
     <>
-      <h1 style={{ textAlign: "center" }} id="mywork">My Work</h1>
+      <h1 style={{ textAlign: "center" }} id="mywork">{t('My Work')}</h1>
       <ContainerStyle  className="container">
         {workList
           .slice(0, showAll ? workList.length : visibleProjects)
           .map((work, index) => (
             <WorkCard key={index}>
               <img src={work.img} alt={work.title} />
-              <h5>{work.title}</h5>
-              <p>{work.par}</p>
+              <h5>{t(work.title)}</h5>
+              <p>{t(work.par)}</p>
             </WorkCard>
           ))}
       </ContainerStyle>
       <ButtonStyle onClick={toggleShowMore}>
-        {showAll ? "Show Less" : "Show More"}
+        {showAll ? t("Show Less") : t("Show More")}
       </ButtonStyle>
     </>
   );

@@ -9,10 +9,12 @@ import MenuItem from '@mui/material/MenuItem';
 import Container from '@mui/material/Container';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
+import { useTranslation } from 'react-i18next';
 
-const pages = [{ nav: "/", list: "Home" }, { nav: "#mywork", list: "My Work" }, { nav: "#myskill", list: "My Skill" }, , { nav: "#aboutus", list: "About Me" }, { nav: "#contact", list: "Contact Me" },];
+const pages = [{ nav: "/", list: "Home" }, { nav: "#mywork", list: "My Work" }, { nav: "#myskill", list: "My Skill" }, { nav: "#aboutus", list: "About Me" }, { nav: "#contact", list: "Contact Me" }];
 
 function Header() {
+  const { t, i18n } = useTranslation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -21,6 +23,11 @@ function Header() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const changeLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'ne' : 'en';
+    i18n.changeLanguage(newLang);
   };
 
   return (
@@ -42,8 +49,15 @@ function Header() {
               textDecoration: 'none',
             }}
           >
-            My Portfolio
+            {t('My Portfolio')}
           </Typography>
+
+          {/* Language Switcher */}
+          <Box sx={{ mr: 2 }}>
+            <Button onClick={changeLanguage} sx={{ color: 'white', minWidth: 'auto' }}>
+              {i18n.language === 'en' ? 'NE →' : 'EN →'}
+            </Button>
+          </Box>
 
           {/* Mobile Menu Icon */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'right' }}>
@@ -52,8 +66,6 @@ function Header() {
               aria-label="open menu"
               onClick={handleOpenNavMenu}
               sx={{ color: "red" }}
-
-
             >
               <MenuIcon />
             </IconButton>
@@ -62,18 +74,16 @@ function Header() {
               anchorOrigin={{
                 vertical: 'top',
                 horizontal: 'left',
-
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
                 horizontal: 'left',
-
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none', },
+                display: { xs: 'block', md: 'none' },
                 '& .MuiPaper-root': {
                   width: '100%',
                   textAlign: 'center',
@@ -87,7 +97,7 @@ function Header() {
                   sx={{ my: 2, color: 'gray', display: 'block' }}
                   href={page.nav}
                 >
-                  {page.list}
+                  {t(page.list)}
                 </Button>
               ))}
             </Menu>
@@ -102,7 +112,7 @@ function Header() {
                 sx={{ my: 2, color: 'white', display: 'block' }}
                 href={page.nav}
               >
-                {page.list}
+                {t(page.list)}
               </Button>
             ))}
           </Box>
